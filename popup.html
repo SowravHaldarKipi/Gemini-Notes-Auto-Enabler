@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <style>
+    :root { --p: #2563eb; --bg: #ffffff; --text: #0f172a; }
+    body { width: 300px; margin: 0; font-family: -apple-system, system-ui, sans-serif; background: #f8fafc; color: var(--text); overflow: hidden; }
+    .header { padding: 20px; background: white; display: flex; align-items: center; justify-content: space-between; border-bottom: 1px solid #f1f5f9; }
+    .title { display: flex; align-items: center; gap: 8px; font-weight: 800; font-size: 14px; color: var(--p); letter-spacing: -0.02em; }
+    .hero-img { width: 100%; height: 140px; object-fit: cover; }
+    .content { padding: 20px; }
+    .card { background: white; padding: 20px; border-radius: 16px; border: 1px solid #e2e8f0; box-shadow: 0 10px 15px -3px rgba(0,0,0,0.05); }
+    .switch-container { display: flex; justify-content: space-between; align-items: center; padding-bottom: 16px; border-bottom: 1px solid #f1f5f9; }
+    .switch { position: relative; display: inline-block; width: 44px; height: 24px; }
+    .switch input { opacity: 0; width: 0; height: 0; }
+    .slider { position: absolute; cursor: pointer; top: 0; left: 0; right: 0; bottom: 0; background-color: #cbd5e1; transition: .4s; border-radius: 34px; }
+    .slider:before { position: absolute; content: ""; height: 18px; width: 18px; left: 3px; bottom: 3px; background-color: white; transition: .4s; border-radius: 50%; }
+    input:checked + .slider { background-color: var(--p); }
+    input:checked + .slider:before { transform: translateX(20px); }
+    .status-text { margin-top: 16px; font-size: 11px; color: #64748b; font-weight: 500; display: flex; align-items: center; gap: 6px; }
+    .footer { padding: 12px 20px; text-align: center; font-size: 10px; color: #94a3b8; font-weight: 600; text-transform: uppercase; letter-spacing: 0.1em; }
+  </style>
+</head>
+<body>
+  <div class="header">
+    <div class="title"><div style="width: 12px; height: 12px; background: var(--p); border-radius: 4px;"></div> GeminiAuto</div>
+    <div id="status-badge" style="font-size: 9px; font-weight: 800; color: #2563eb; background: #eff6ff; padding: 4px 8px; border-radius: 4px; text-transform: uppercase;">Active</div>
+  </div>
+  <img class="hero-img" src="https://images.unsplash.com/photo-1620712943543-bcc4688e7485?q=80&w=400&h=200&auto=format&fit=crop" alt="AI Neural Network" />
+  <div class="content">
+    <div class="card">
+      <div class="switch-container">
+        <span style="font-weight: 700; font-size: 14px;">Auto-Enable</span>
+        <label class="switch">
+          <input type="checkbox" id="toggle" checked>
+          <span class="slider"></span>
+        </label>
+      </div>
+      <div class="status-text">
+        <div id="status-indicator" style="width: 6px; height: 6px; background: #22c55e; border-radius: 50%;"></div>
+        <span id="status-msg">SYSTEM OPERATIONAL</span>
+      </div>
+    </div>
+  </div>
+  <div class="footer">Premium Automation Protocol</div>
+  <script src="popup.js"></script>
+</body>
+</html>
