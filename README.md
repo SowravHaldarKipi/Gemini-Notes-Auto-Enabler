@@ -1,14 +1,14 @@
 <div align="center">
 
-# 🤖 Gemini Notes Auto Enabler - Google Meet
+# 🤖 GeminiNotes Auto Enabler - Google Meet
 
-### Premium AI Automation Browser Extension
+### Auto-Enable Gemini Notes for Google Meet
 
 ![Status](https://img.shields.io/badge/status-active-22c55e?style=for-the-badge)
-![Type](https://img.shields.io/badge/type-browser%20extension-2563eb?style=for-the-badge)
+![Platform](https://img.shields.io/badge/platform-Google%20Meet-2563eb?style=for-the-badge)
 ![License](https://img.shields.io/badge/license-MIT-0f172a?style=for-the-badge)
 
-*A sleek, minimal browser extension popup that puts AI automation control at your fingertips.*
+*Never lose your meeting notes again — GeminiAuto keeps Gemini Notes running throughout your Google Meet calls.*
 
 </div>
 
@@ -16,18 +16,20 @@
 
 ## 📌 What Is GeminiAuto?
 
-**GeminiAuto** is a browser extension that provides a clean, one-click interface to enable or disable an AI-powered automation protocol. Designed for simplicity and speed, the popup gives users instant visibility into system status and full control over auto-enable behavior — without ever leaving their current tab.
+During a Google Meet call, **Gemini Notes** is a built-in AI feature that automatically transcribes and summarises your meeting. However, users often accidentally stop or dismiss it mid-call — and once stopped, it doesn't restart on its own.
+
+**GeminiAuto** solves this. It's a browser extension that **monitors your Google Meet session and automatically re-enables Gemini Notes** whenever it detects that note-taking has been stopped. Think of it as a silent guardian for your meeting notes — ensuring you never walk away from a call with an incomplete record.
 
 ---
 
 ## ✨ Features
 
-- **⚡ Auto-Enable Toggle** — Smooth animated switch to turn automation on or off instantly
-- **🟢 Live Status Indicator** — Real-time green dot + status text confirming system health
-- **🔵 Active Badge** — Header pill badge clearly showing the extension is running
-- **🖼 AI-Themed Hero Banner** — Full-width visual banner for a polished, premium feel
-- **🎨 Modern Minimal UI** — Card-based layout with soft shadows, rounded corners, and blue accent palette
-- **📦 Zero Dependencies** — Pure HTML & CSS, no external JavaScript libraries required
+- **🔁 Auto Re-Enable** — Detects when Gemini Notes is stopped and automatically turns it back on
+- **⚡ One-Click Toggle** — Instantly enable or disable the auto-restore behaviour from the popup
+- **🟢 Live Status Indicator** — Always shows whether the automation is actively watching your Meet session
+- **🔵 Active Badge** — Header badge confirms the extension is loaded and running
+- **🪶 Lightweight** — Runs silently in the background with zero performance impact on your calls
+- **📦 No Dependencies** — Pure HTML, CSS, and Vanilla JavaScript
 
 ---
 
@@ -44,11 +46,17 @@
    - **Chrome:** `chrome://extensions`
    - **Edge:** `edge://extensions`
 
-3. Enable **Developer Mode** (toggle in top right)
+3. Enable **Developer Mode** (toggle in the top right)
 
 4. Click **"Load unpacked"** and select the project folder
 
-5. The GeminiAuto icon will appear in your toolbar — click it to open the popup
+5. Join any **Google Meet** call — GeminiAuto will automatically keep Gemini Notes active
+
+---
+
+## 💡 Why This Exists
+
+Google Meet's Gemini Notes is powerful — it captures action items, summaries, and transcripts. But it's easy to accidentally click "Stop" during a busy meeting, and there's no built-in way to auto-resume it. GeminiAuto fills that gap, making note-taking truly hands-free.
 
 ---
 
@@ -57,8 +65,8 @@
 ```
 geminiauto/
 ├── manifest.json       # Extension manifest (permissions, metadata)
-├── popup.html          # Main popup UI
-├── popup.js            # Toggle logic & state management
+├── popup.html          # Popup UI — toggle and status display
+├── popup.js            # Automation logic — detects & re-enables Gemini Notes
 └── README.md           # You are here
 ```
 
@@ -72,6 +80,7 @@ geminiauto/
 | Styling | CSS3 (Custom Properties, Flexbox) |
 | Scripting | Vanilla JavaScript |
 | Platform | Chrome Extension API (Manifest V3) |
+| Target App | Google Meet + Gemini Notes |
 
 ---
 
@@ -82,5 +91,5 @@ This project is licensed under the **MIT License**. See [`LICENSE`](./LICENSE) f
 ---
 
 <div align="center">
-  <sub>Built with precision · Powered by automation · GeminiAuto</sub>
+  <sub>GeminiAuto · Keep your meeting notes running · Always.</sub>
 </div>
